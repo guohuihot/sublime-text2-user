@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+{c\$archive [tclass=archive/] [chid=${1:5}/] [val=a/] [id=\$v[fromid]/] [detail=1/]}
+<li><a href="{arcurl}" target="_blank" title="{subject}">{c\$subject [tclass=text/] [tname=subject/] ${11:[trim=100/]}${12:[color=color/]}}{/c\$subject}</a></li>
+{/c\$archive}]]></content>
+    <tabTrigger>arc1</tabTrigger>
+    <description>08cms - 单个文档</description>
+    <scope>text.html</scope>
+</snippet>

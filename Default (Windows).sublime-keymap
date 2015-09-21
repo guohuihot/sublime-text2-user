@@ -1,0 +1,931 @@
+[
+    // { "keys": ["ctrl+shift+space"], "command": "auto_complete,code_intel_auto_complete" },
+    // 软撤消
+
+    { "keys": ["ctrl+e"], "command": "soft_undo" },
+    { "keys": ["ctrl+shift+alt+x"], "command": "move_to", "args": {"to": "brackets"} },
+
+    { "keys": ["pageup"], "command": "move_to", "args": {"to": "bof", "extend": false} },
+    { "keys": ["pagedown"], "command": "move_to", "args": {"to": "eof", "extend": false} },
+    { "keys": ["ctrl+space"], "command": "replace_completion_with_auto_complete", "context":
+        [
+            { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+            { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+            { "key": "setting.tab_completion", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["ctrl+space"], "command": "auto_complete" },
+
+    { "keys": ["f5"], "command": "sort_lines", "args": {"case_sensitive": false} },
+    { "keys": ["alt+f"], "command": "find_all_under" },
+
+    // { "keys": ["ctrl+shift+c"], "command": "expand_selection", "args": {"to": "tag"} },
+    { "keys": ["ctrl+alt+v"], "command": "paste_and_indent" },
+    { "keys": ["ctrl+shift+alt+s"], "command": "save_all" },
+
+
+    //{ "keys": ["f3"], "command": "next_view_in_stack" },
+    //{ "keys": ["f2"], "command": "prev_view_in_stack" },
+
+    { "keys": ["f2"], "command": "next_bookmark" },
+    { "keys": ["f3"], "command": "prev_bookmark" },
+    { "keys": ["ctrl+f2"], "command": "toggle_bookmark" },
+    { "keys": ["ctrl+shift+f2"], "command": "clear_bookmarks" },
+    { "keys": ["alt+f2"], "command": "select_all_bookmarks" },
+
+
+    { "keys": ["alt+q"], "command": "focus_group", "args": { "group": 0 } },
+    { "keys": ["alt+w"], "command": "focus_group", "args": { "group": 1 } },
+
+    { "keys": ["ctrl+alt+shift+p"], "command": "show_scope_name" },
+    //browse inside
+    {
+        "keys": ["ctrl+q"],
+        "command": "dired",
+        "args": {
+            "immediate": true,
+            "single_pane": true
+        }
+    },
+// markdown
+{ "keys": ["alt+p"], "command": "markdown_preview_select", "args": {"target": "browser"} },
+{ "keys": ["alt+p"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },
+//下面两个是emmet插件的设置
+{
+    "keys": [
+        "ctrl+shift+x"
+    ],
+    "args": {
+        "action": "matching_pair"
+    },
+    "command": "run_emmet_action",
+    "context": [
+        {
+            "key": "emmet_action_enabled.matching_pair"
+        }
+    ]
+},
+
+    {
+        "keys": [
+            "ctrl+shift+c"
+        ], 
+        "args": {
+            "action": "balance_outward"
+        }, 
+        "command": "run_emmet_action", 
+        "context": [
+            {
+                "key": "emmet_action_enabled.balance_outward"
+            }
+        ]
+    }, 
+    {
+        "keys": [
+            "ctrl+alt+c"
+        ],
+        "command": "rename_tag",
+        "context": [
+            {
+                "key": "emmet_action_enabled.rename_tag"
+            }
+        ]
+    },
+    {//展开emmet的简写
+        "keys": [
+            "ctrl+shift+u"
+        ],
+        "args": {
+            "action": "expand_abbreviation"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.expand_abbreviation"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "ctrl+,"
+        ],
+        "args": {
+            "action": "match_pair_inward"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.match_pair_inward"
+            }
+        ]
+    },
+
+    {
+        "keys": [
+            "ctrl+shift+i"
+        ], 
+        "args": {
+            "action": "encode_decode_data_url"
+        }, 
+        "command": "run_emmet_action", 
+        "context": [
+            {
+                "key": "emmet_action_enabled.encode_decode_data_url"
+            }
+        ]
+    }, 
+    {
+        "keys": [
+            "shift+ctrl+r"
+        ],
+        "args": {
+            "action": "remove_tag"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.remove_tag"
+            }
+        ]
+    },
+    {//选择标点之间的内容
+        "keys": [
+            "ctrl+shift+a"
+        ],
+        "args": {
+            "action": "select_next_item"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.select_next_item"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "ctrl+alt+left"
+        ],
+        "args": {
+            "action": "prev_edit_point"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.prev_edit_point"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "ctrl+alt+right"
+        ],
+        "args": {
+            "action": "next_edit_point"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.next_edit_point"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "ctrl+u"
+        ],
+        "args": {
+            "action": "update_image_size"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.update_image_size"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "shift+ctrl+u"
+        ],
+        "args": {
+            "action": "reflect_css_value"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.reflect_css_value"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "ctrl+shift+y"
+        ],
+        "args": {
+            "action": "expand_abbreviation"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.expand_abbreviation"
+            }
+        ]
+    },
+{ "keys": ["ctrl+]"], "command": "compact_expand_css", "args": { "action": "expand" }  },
+{ "keys": ["ctrl+["], "command": "compact_expand_css", "args": { "action": "compact" } },
+{
+        "keys": [
+            "ctrl+shfit+i"
+        ], 
+        "args": {
+            "action": "encode_decode_data_url"
+        }, 
+        "command": "run_emmet_action", 
+        "context": [
+            {
+                "key": "emmet_action_enabled.encode_decode_data_url"
+            }
+        ]
+    },
+    //以下是代码高亮插件
+    //Select text between brackets
+    {
+        "keys": ["ctrl+shift+e"],
+        "command": "bh_key",
+        "args":
+        {
+            "lines" : true,
+            "plugin":
+            {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect"
+            }
+        }
+    },
+    // Remove brackets
+    {
+        "keys": ["ctrl+alt+r"],
+        "command": "bh_remove_brackets"
+    },
+    // Select tag name of HTML/XML tag (both opening name and closing)
+    {
+        "keys": ["ctrl+alt+d"],
+        "command": "bh_key",
+        "args":
+        {
+            "plugin":
+            {
+                "type": ["cfml", "html", "angle"],
+                "command": "bh_modules.tagnameselect"
+            }
+        }
+    },
+    //jsformat
+    {
+        "keys": ["ctrl+alt+f"], "command": "js_format",
+        "context": [{"key": "selector", "operator": "equal", "operand": "source.js,source.json"}]
+    },
+    //clip { "command": "list_all_edits", "caption": "List All" }
+    { "keys": ["ctrl+shift+v"], "command": "clipboard_display" },
+    //ftp
+    { "keys": ["alt+u"], "command": "sftp_upload_file" },
+    { "keys": ["alt+d"], "command": "sftp_download_file" },
+
+    { "keys": ["alt+b"], "command": "sftp_browse" },
+
+    { "keys": ["ctrl+alt+u","ctrl+alt+r"], "command": "sftp_upload_folder" },
+    { "keys": ["ctrl+alt+u","ctrl+alt+y"], "command": "sftp_sync_up" },
+    { "keys": ["ctrl+alt+u","ctrl+alt+n"], "command": "sftp_upload_open_files" },
+    { "keys": ["alt+m"], "command": "sftp_monitor_file" },
+
+    { "keys": ["ctrl+alt+u","ctrl+alt+e"], "command": "sftp_download_folder" },
+    { "keys": ["ctrl+alt+u","ctrl+alt+i"], "command": "sftp_diff_remote_file" },
+
+    { "keys": ["ctrl+alt+u","ctrl+alt+c"], "command": "sftp_vcs_changed_files" },
+
+
+    { "keys": ["ctrl+alt+r","ctrl+alt+s"], "command": "sftp_create_server" },
+    { "keys": ["alt+t"], "command": "sftp_browse_server" },
+    { "keys": ["alt+l"], "command": "sftp_last_server" },
+    { "keys": ["alt+e"], "command": "sftp_edit_server" },
+    { "keys": ["ctrl+alt+r","ctrl+alt+d"], "command": "sftp_delete_server" },
+
+    { "keys": ["alt+`"], "command": "sftp_show_panel" },
+    { "keys": ["alt+x"], "command": "sftp_cancel_upload" },
+    //alignment
+    { "keys": ["ctrl+alt+a"], "command": "alignment" },
+    // css js_format
+
+    // Convert to expanded format
+    {
+        "keys": ["ctrl+alt+["],
+        "command": "css_format",
+        "args": {
+            "action": "expand"
+        }
+    },
+
+    // Convert to compact format
+    {
+        "keys": ["ctrl+alt+]"],
+        "command": "css_format",
+        "args": {
+            "action": "compact"
+        }
+    },
+
+    { "keys": ["alt+s"], "command": "toggle_side_bar" },
+    //快速打开文件位置
+    { "keys": ["ctrl+f12"], "command": "open_dir", "args": {"dir": "$file_path", "file":"$file_name"}},
+
+     { "keys": ["alt+c"], "command": "copy_path" },
+     { "keys": ["alt+a"], "command": "open_file_name"},
+     { "keys": ["f12"], "command": "open_in_browser" },
+     {
+         "keys": ["alt+f12"],
+         "command": "side_bar_files_open_with",
+         "args": {
+             "paths": [],
+             "application": "D:\\Program Files\\Mozilla Firefox\\firefox.exe",
+             "extensions": ".*" //any file with extension
+         }
+     },
+     // css_comb
+     { "keys": ["ctrl+alt+s"], "command": "css_comb" },
+     // filesbrowser
+  {
+      "keys": ["enter"],
+      "command": "dired_select", "args": {"other_group": false},
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+    "keys": ["enter"],
+    "command": "dired_select", "args": {"and_close": true},
+    "context": [
+      { "key": "selector", "operator": "equal", "operand": "text.dired" },
+      { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+      "keys": ["shift+enter"],
+      "command": "dired_preview",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["super+enter"],
+      "command": "dired_select",
+      "args": { "new_view": true },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["ctrl+enter"],
+      "command": "dired_select",
+      "args": { "new_view": true },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["o"],
+      "command": "dired_expand",
+      "args": { "toggle": true },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["right"],
+      "command": "dired_expand",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["l"],
+      "command": "dired_expand",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["left"],
+      "command": "dired_fold",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["h"],
+      "command": "dired_fold",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["M"],
+      "command": "dired_create",
+      "args": { "which": "directory" },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["N"],
+      "command": "dired_create",
+      "args": { "which": "file" },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["ctrl+enter"],
+      "command": "dired_create_and_open",
+      "context": [{ "key": "setting.dired_create", "operand": true }]
+  },
+  {
+      "keys": ["super+enter"],
+      "command": "dired_create_and_open",
+      "context": [{ "key": "setting.dired_create", "operand": true }]
+  },
+  {
+      "keys": ["r"],
+      "command": "dired_refresh",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["m"],
+      "command": "dired_mark",
+      "args": { "mark": "toggle" },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["shift+down"],
+      "command": "dired_mark",
+      "args": { "mark": "toggle" },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["shift+up"],
+      "command": "dired_mark",
+      "args": { "mark": "toggle", "forward": false },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["u"],
+      "command": "dired_mark",
+      "args": { "mark": false, "markall": true },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["t"],
+      "command": "dired_mark",
+      "args": { "mark": "toggle", "markall": true },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["backspace"],
+      "command": "dired_up",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["alt+shift+d"],
+      "command": "dired_delete",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["D"],
+      "command": "dired_delete", "args": {"trash": true},
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+    "keys": ["ctrl+c"],
+    "command": "dired_copy_files",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["super+c"],
+    "command": "dired_copy_files",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["ctrl+x"],
+    "command": "dired_copy_files",
+    "args":{"cut": true},
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["super+x"],
+    "command": "dired_copy_files",
+    "args":{"cut": true},
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["ctrl+v"],
+    "command": "dired_paste_files",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["super+v"],
+    "command": "dired_paste_files",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["ctrl+z"],
+    "command": "dired_clear_copy_cut_list",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["super+z"],
+    "command": "dired_clear_copy_cut_list",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+      "keys": ["*"],
+      "command": "dired_mark_extension",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["R"],
+      "command": "dired_rename",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+  {
+    "keys" : ["enter"],
+    "command": "dired_rename_commit",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": true }
+    ]
+  },
+  {
+    "keys" : ["escape"],
+    "command": "dired_rename_cancel",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": true }
+    ]
+  },
+  {
+    "keys" : ["g"],
+    "command": "dired_goto",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["/"],
+    "command": "show_panel",
+    "args": {"panel": "incremental_find", "reverse": false},
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["\\"],
+    "command": "dired_open_external",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false },
+        { "key": "num_selections", "operator": "equal", "operand": 1 }
+    ]
+  },
+  {
+    "keys": ["W"],
+    "command": "dired_open_in_new_window",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["p"],
+    "command": "dired_jump",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["P"],
+    "command": "dired_edit_jump_point",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["?"],
+    "command": "dired_help",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["H"],
+    "command": "dired_toggle_hidden_files",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["f"],
+    "command": "dired_toggle_project_folder",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+  {
+    "keys": ["F"],
+    "command": "dired_only_one_project_folder",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+// custom movement in buffer
+  {
+      "keys": ["j"],
+      "command": "dired_next_line",
+      "args": { "forward": true },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false },
+        { "key": "setting.command_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["down"],
+      "command": "dired_next_line",
+      "args": { "forward": true },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false },
+        { "key": "setting.command_mode", "operand": false }
+      ]
+  },
+
+  {
+      "keys": ["k"],
+      "command": "dired_next_line",
+      "args": { "forward": false },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false },
+        { "key": "setting.command_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["up"],
+      "command": "dired_next_line",
+      "args": { "forward": false },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false },
+        { "key": "setting.command_mode", "operand": false }
+      ]
+  },
+  {
+      "keys": ["super+up"],
+      "command": "dired_move",
+      "args": {"to": "bof"},
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" }
+      ]
+  },
+  {
+      "keys": ["ctrl+home"],
+      "command": "dired_move",
+      "args": {"to": "bof"},
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" }
+      ]
+  },
+  {
+      "keys": ["super+down"],
+      "command": "dired_move",
+      "args": {"to": "eof"},
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" }
+      ]
+  },
+  {
+      "keys": ["ctrl+end"],
+      "command": "dired_move",
+      "args": {"to": "eof"},
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" }
+      ]
+  },
+  {
+      "keys": ["s"],
+      "command": "dired_find_in_files",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": false }
+      ]
+  },
+
+// Internal
+  {
+      "keys": ["tab"],
+      "command": "dired_complete",
+      "context": [{ "key": "setting.dired_prompt", "operand": true }]
+  },
+
+// Disabling some keys in rename mode
+  {
+      "keys": ["backspace"],
+      "command": "dired_noop",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": true },
+        { "key": "preceding_text", "operator": "regex_contains", "operand": "[≡▸▾]\\s*$|^\\s*$|^⠤.*$"}
+      ]
+  },
+  {
+      "keys": ["backspace"],
+      "command": "dired_noop",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "header.dired | help.dired" },
+        { "key": "setting.dired_rename_mode", "operand": true }
+      ]
+  },
+  {
+      "keys": ["delete"],
+      "command": "dired_noop",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": true },
+        { "key": "preceding_text", "operator": "regex_contains", "operand": "[≡▸▾]$|^\\s*$|^⠤.*$"}
+      ]
+  },
+  {
+      "keys": ["delete"],
+      "command": "dired_noop",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired" },
+        { "key": "setting.dired_rename_mode", "operand": true },
+        { "key": "following_text", "operator": "regex_contains", "operand": "^$"}
+      ]
+  },
+  {
+      "keys": ["delete"],
+      "command": "dired_noop",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "header.dired | help.dired" },
+        { "key": "setting.dired_rename_mode", "operand": true }
+      ]
+  },
+  {
+    "keys": [" "],
+    "command": "dired_quick_look",
+    "context": [
+      { "key": "selector", "operator": "equal", "operand": "text.dired" },
+      { "key": "setting.dired_rename_mode", "operand": false }
+    ]
+  },
+
+  // PROJECTS
+
+  {
+      "keys": ["j"],
+      "command": "dired_project_next_line",
+      "args": { "forward": true },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired_jump_list" }
+      ]
+  },
+  {
+      "keys": ["down"],
+      "command": "dired_project_next_line",
+      "args": { "forward": true },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired_jump_list" }
+      ]
+  },
+  {
+      "keys": ["k"],
+      "command": "dired_project_next_line",
+      "args": { "forward": false },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired_jump_list" }
+      ]
+  },
+  {
+      "keys": ["up"],
+      "command": "dired_project_next_line",
+      "args": { "forward": false },
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired_jump_list" }
+      ]
+  },
+  { // Disable left and right key on projects
+      "keys": ["right"],
+      "command": "dired_noop",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired_jump_list" }
+      ]
+  },
+  {
+      "keys": ["left"],
+      "command": "dired_noop",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired_jump_list" }
+      ]
+  },
+  {
+      "keys": ["enter"],
+      "command": "dired_project_select",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired_jump_list dired.item.projects" }
+      ]
+  },
+  {
+    "keys": ["P"],
+    "command": "dired_project_edit_jump_point",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "text.dired_jump_list dired.item.projects" }
+    ]
+  }
+ 
+]

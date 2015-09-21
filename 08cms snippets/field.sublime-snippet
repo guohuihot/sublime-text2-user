@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[{c\$field [cname=field/] [tclass=field/] [tname=zxcd/] [type=archive/] [fname=zxcd/]}{/c\$field}]]></content>
+    <tabTrigger>field</tabTrigger>
+    <description>08cms - 字段标题</description>
+    <scope>text.html</scope>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[[startno=${1:1}/]]]></content>
+    <tabTrigger>startno</tabTrigger>
+    <description>08cms - startno</description>
+    <scope>text.html</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+{\$tplurl}]]></content>
+    <tabTrigger>tpl</tabTrigger>
+    <description>08cms - {$tplurl}</description>
+    <scope>text.html</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+{c\$member  [tclass=member/] [chsource=${1:2}/] [val=a/] ${2:[id=\$v[fromid]/]} [detail=1/]}
+${0}
+{/c\$member}]]></content>
+    <tabTrigger>member</tabTrigger>
+    <description>08cms - 单个会员</description>
+    <scope>text.html</scope>
+</snippet>

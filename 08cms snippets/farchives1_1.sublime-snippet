@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+{if \$v['html']}{html}{elseif \$v['image']}<a href="{link}" target="_blank"><img {c\$image [tclass=image/] [tname=image/] [val=u/] [maxwidth=${4:990}/] [maxheight=${5:70}/]} src="{url}"  height="${5:70}" width="${4:990}"
+{/c\$image}/></a>{elseif \$v[flash]}{c\$flash [tclass=flash/] [tname=flash/] [val=f/] [width=${4:990}/] [height=${5:70}/]}{playbox}{if \$v['link']}<a href="{\$v['link']}" style="position: relative;margin-top:-{height}px;width:{width}px;height:{height}px;display:block" target="_blank"><img width="{width}" height="{height}" src="{\$cms_abs}userfiles/notdel/blank.gif"/></a>{/if}{/c\$flash}{/if\}]]></content>
+    <tabTrigger>farcimg1</tabTrigger>
+    <description>08cms - 图片副件列表</description>
+    <scope>text.html</scope>
+</snippet>

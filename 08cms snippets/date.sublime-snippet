@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+{c\$date [tclass=date/] [tname=createdate/] [date=${1:Y-m-d}/]}{/c\$date}${0:
+说明：
+y-m-d:年-月-日：09-04-07
+Y-m-d:年-月-日：2009-04-07
+m-d-y:月-日-年：04-07-09
+m-d-Y:月-日-年：04-07-2009
+y-m:年-月&#12288; ：09-04
+Y-m:年-月&#12288; ：2009-04
+m-d:&#12288; 月-日：04-07
+M-d:&#12288; 月-日：Apr-07
+F-d:&#12288; 月-日：April-07
+M-d-Y:月-日-年：Apr-07-09
+M-d-y:月-日-年：Apr-07-2009
+Y年m月d日:XXXX年XX月XX日：2012年02月22日
+Y年m月:XXXX年XX月&#12288;&#12288; ：2012年02月
+m月d日:&#12288;&#12288;&#12288; XX月XX日 ：04月07日
+}]]></content>
+    <tabTrigger>date</tabTrigger>
+    <description>08cms - 时间</description>
+    <scope>text.html</scope>
+</snippet>
