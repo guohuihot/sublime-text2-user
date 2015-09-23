@@ -22,7 +22,9 @@
     // { "keys": ["ctrl+shift+c"], "command": "expand_selection", "args": {"to": "tag"} },
     { "keys": ["ctrl+alt+v"], "command": "paste_and_indent" },
     { "keys": ["ctrl+shift+alt+s"], "command": "save_all" },
-
+    
+    { "keys": ["ctrl+]"], "command": "indent" },
+    { "keys": ["ctrl+["], "command": "unindent" },
 
     //{ "keys": ["f3"], "command": "next_view_in_stack" },
     //{ "keys": ["f2"], "command": "prev_view_in_stack" },
@@ -232,9 +234,9 @@
             }
         ]
     },
-{ "keys": ["ctrl+]"], "command": "compact_expand_css", "args": { "action": "expand" }  },
-{ "keys": ["ctrl+["], "command": "compact_expand_css", "args": { "action": "compact" } },
-{
+   /* { "keys": ["ctrl+]"], "command": "compact_expand_css", "args": { "action": "expand" }  },
+    { "keys": ["ctrl+["], "command": "compact_expand_css", "args": { "action": "compact" } },*/
+    {
         "keys": [
             "ctrl+shfit+i"
         ], 
