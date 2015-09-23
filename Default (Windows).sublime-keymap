@@ -52,6 +52,11 @@
 // markdown
 { "keys": ["alt+p"], "command": "markdown_preview_select", "args": {"target": "browser"} },
 { "keys": ["alt+p"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },
+// html css js pretty
+{
+  "keys": ["ctrl+alt+f"],
+  "command": "htmlprettify"
+},
 //下面两个是emmet插件的设置
 {
     "keys": [
@@ -283,11 +288,6 @@
             }
         }
     },
-    //jsformat
-    {
-        "keys": ["ctrl+alt+f"], "command": "js_format",
-        "context": [{"key": "selector", "operator": "equal", "operand": "source.js,source.json"}]
-    },
     //clip { "command": "list_all_edits", "caption": "List All" }
     { "keys": ["ctrl+shift+v"], "command": "clipboard_display" },
     //ftp
@@ -317,7 +317,6 @@
     { "keys": ["alt+x"], "command": "sftp_cancel_upload" },
     //alignment
     { "keys": ["ctrl+alt+a"], "command": "alignment" },
-    // css js_format
 
     // Convert to expanded format
     {
