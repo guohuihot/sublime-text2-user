@@ -52,26 +52,62 @@
 // markdown
 { "keys": ["alt+p"], "command": "markdown_preview_select", "args": {"target": "browser"} },
 { "keys": ["alt+p"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },
+// open url
+{ "keys": ["f1"], "command": "open_url" },
 // html css js pretty
 {
   "keys": ["ctrl+alt+f"],
   "command": "htmlprettify"
 },
-//下面两个是emmet插件的设置
+// js format
 {
-    "keys": [
-        "ctrl+shift+x"
-    ],
-    "args": {
-        "action": "matching_pair"
-    },
-    "command": "run_emmet_action",
-    "context": [
-        {
-            "key": "emmet_action_enabled.matching_pair"
-        }
-    ]
+  "keys": ["ctrl+alt+f"],
+  "command": "js_format",
+  "context": [{
+    "key": "selector",
+    "operator": "equal",
+    "operand": "source.js,source.json"
+  }]
 },
+  // tag
+  {
+    "keys": ["ctrl+alt+f"],
+    "command": "tag_indent",
+    "context": [{
+      "key": "selector",
+      "operator": "equal",
+      "operand": "text.html,text.htm,text.xml,text.xsl"
+    }]
+  },
+  {
+    "keys": ["ctrl+alt+r"],
+    "command": "tag_remove_picked_in_selection"
+  },
+  {
+    "keys": ["ctrl+shift+alt+r"],
+    "command": "tag_remove_all_in_selection"
+  },
+  {
+    "keys": ["alt+r"],
+    "command": "tag_remove_picked_attributes_in_selection"
+  },
+  // AdvancedNewFile
+
+  //emmet
+  {
+      "keys": [
+          "ctrl+shift+x"
+      ],
+      "args": {
+          "action": "matching_pair"
+      },
+      "command": "run_emmet_action",
+      "context": [
+          {
+              "key": "emmet_action_enabled.matching_pair"
+          }
+      ]
+  },
 
     {
         "keys": [
@@ -143,7 +179,7 @@
     }, 
     {
         "keys": [
-            "shift+ctrl+r"
+            "ctrl+shift+r"
         ],
         "args": {
             "action": "remove_tag"
@@ -255,7 +291,7 @@
             }
         ]
     },
-    //以下是代码高亮插件
+    //BracketHighlighter
     //Select text between brackets
     {
         "keys": ["ctrl+shift+e"],
@@ -271,25 +307,12 @@
         }
     },
     // Remove brackets
-    {
+    /*{
         "keys": ["ctrl+alt+r"],
         "command": "bh_remove_brackets"
-    },
-    // Select tag name of HTML/XML tag (both opening name and closing)
-    {
-        "keys": ["ctrl+alt+d"],
-        "command": "bh_key",
-        "args":
-        {
-            "plugin":
-            {
-                "type": ["cfml", "html", "angle"],
-                "command": "bh_modules.tagnameselect"
-            }
-        }
-    },
+    },*/
     //clip { "command": "list_all_edits", "caption": "List All" }
-    { "keys": ["ctrl+shift+v"], "command": "clipboard_display" },
+    { "keys": ["ctrl+alt+v"], "command": "clipboard_display" },
     //ftp
     { "keys": ["alt+u"], "command": "sftp_upload_file" },
     { "keys": ["alt+d"], "command": "sftp_download_file" },
@@ -338,7 +361,7 @@
 
     { "keys": ["alt+s"], "command": "toggle_side_bar" },
     //快速打开文件位置
-    { "keys": ["ctrl+f12"], "command": "open_dir", "args": {"dir": "$file_path", "file":"$file_name"}},
+    // { "keys": ["ctrl+f12"], "command": "open_dir", "args": {"dir": "$file_path", "file":"$file_name"}},
 
      { "keys": ["alt+c"], "command": "copy_path" },
      { "keys": ["alt+a"], "command": "open_file_name"},
@@ -927,6 +950,11 @@
     "context": [
         { "key": "selector", "operator": "equal", "operand": "text.dired_jump_list dired.item.projects" }
     ]
+  }
+ ,
+  {
+    "keys": ["ctrl+alt+g"],
+    "command": "filter_pipes_process"
   }
  
 ]

@@ -6,6 +6,7 @@
 	],
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Alignment",
 		"BracketHighlighter",
 		"Clipboard History",
@@ -16,18 +17,19 @@
 		"CSScomb",
 		"DocBlockr",
 		"Emmet",
-		"FileBrowser",
-		"HTML-CSS-JS Prettify",
 		"HTML5",
 		"JavaScript & NodeJS Snippets",
 		"jQuery",
+		"JsFormat",
 		"LESS",
 		"Markdown Extended",
 		"Markdown Preview",
+		"Open URL",
 		"Package Control",
 		"PlainTasks",
 		"PowerShell",
 		"SFTP",
-		"SublimeREPL"
+		"SublimeREPL",
+		"Tag"
 	]
 }
