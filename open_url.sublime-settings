@@ -6,6 +6,6 @@
 		{ "endswith": [".exe", ".com"], "action": "run" },
 		{ "endswith": [".txt", ".config", ".md", ".log"], "action": "edit" }
 	],
-	"url": "http://fanyi.baidu.com/#en/zh/"
-	// "url": "http://www.baidu.com/s?wd="
+	"url": "http://www.baidu.com/s?wd="
+	// "url": "http://fanyi.baidu.com/#en/zh/"
 }
