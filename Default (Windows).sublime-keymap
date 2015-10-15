@@ -42,16 +42,16 @@
     { "keys": ["alt+q"], "command": "focus_group", "args": { "group": 0 } },
     { "keys": ["alt+w"], "command": "focus_group", "args": { "group": 1 } },
 
-    { "keys": ["ctrl+alt+shift+p"], "command": "show_scope_name" },
+    { "keys": ["ctrl+q"], "command": "show_scope_name" },
     //browse inside
-    {
+    /*{
         "keys": ["ctrl+q"],
         "command": "dired",
         "args": {
             "immediate": true,
             "single_pane": true
         }
-    },
+    },*/
 // markdown
 { "keys": ["alt+p"], "command": "markdown_preview_select", "args": {"target": "browser"} },
 { "keys": ["alt+p"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },
