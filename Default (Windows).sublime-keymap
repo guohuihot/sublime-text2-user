@@ -2,11 +2,44 @@
     // { "keys": ["ctrl+shift+space"], "command": "auto_complete,code_intel_auto_complete" },
     // 软撤消
 
+    { "keys": ["ctrl+shift+j"], "command": "swap_line_down" },
+    { "keys": ["ctrl+shift+k"], "command": "swap_line_up" },
     { "keys": ["ctrl+e"], "command": "soft_undo" },
     { "keys": ["ctrl+shift+alt+x"], "command": "move_to", "args": {"to": "brackets"} },
 
-    { "keys": ["pageup"], "command": "move_to", "args": {"to": "bof", "extend": false} },
-    { "keys": ["pagedown"], "command": "move_to", "args": {"to": "eof", "extend": false} },
+    { "keys": ["alt+i"], "command": "move", "args": {"by": "lines", "forward": false} },
+    { "keys": ["alt+k"], "command": "move", "args": {"by": "lines", "forward": true} },
+
+    { "keys": ["alt+j"], "command": "move", "args": {"by": "words", "forward": false} },
+    { "keys": ["alt+l"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+
+  { "keys": ["alt+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
+  { "keys": ["alt+right"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+
+  { "keys": ["alt+shift+i"], "command": "move", "args": {"by": "lines", "forward": false, "extend": true} },
+  { "keys": ["alt+shift+k"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true} },
+
+    { "keys": ["alt+u"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+    { "keys": ["alt+m"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+
+
+  { "keys": ["alt+o"], "command": "move", "args": {"by": "pages", "forward": false} },
+  { "keys": ["alt+."], "command": "move", "args": {"by": "pages", "forward": true} },
+
+  { "keys": ["alt+shift+j"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
+  { "keys": ["alt+shift+l"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
+
+  { "keys": ["ctrl+alt+shift+j"], "command": "move", "args": {"by": "words", "forward": false, "extend": true} },
+  { "keys": ["ctrl+alt+shift+l"], "command": "move", "args": {"by": "word_ends", "forward": true, "extend": true} },
+
+    { "keys": ["alt+shift+u"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+    { "keys": ["alt+shift+m"], "command": "move_to", "args": {"to": "eol", "extend": true} },
+
+  { "keys": ["ctrl+alt+i"], "command": "scroll_lines", "args": {"amount": 10.0 } },
+  { "keys": ["ctrl+alt+k"], "command": "scroll_lines", "args": {"amount": -10.0 } },
+
+    { "keys": ["ctrl+alt+u"], "command": "move_to", "args": {"to": "bof", "extend": false} },
+    { "keys": ["ctrl+alt+m"], "command": "move_to", "args": {"to": "eof", "extend": false} },
     { "keys": ["ctrl+space"], "command": "replace_completion_with_auto_complete", "context":
         [
             { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
@@ -15,8 +48,6 @@
         ]
     },
 
-    { "keys": ["alt+up"], "command": "scroll_lines", "args": {"amount": 10.0 } },
-    { "keys": ["alt+down"], "command": "scroll_lines", "args": {"amount": -10.0 } },
     { "keys": ["ctrl+space"], "command": "auto_complete" },
 
     { "keys": ["f5"], "command": "sort_lines", "args": {"case_sensitive": false} },
@@ -210,7 +241,7 @@
     },
     {
         "keys": [
-            "ctrl+alt+left"
+            "ctrl+alt+j"
         ],
         "args": {
             "action": "prev_edit_point"
@@ -224,7 +255,7 @@
     },
     {
         "keys": [
-            "ctrl+alt+right"
+            "ctrl+alt+l"
         ],
         "args": {
             "action": "next_edit_point"
@@ -317,25 +348,15 @@
     //clip { "command": "list_all_edits", "caption": "List All" }
     { "keys": ["ctrl+alt+v"], "command": "clipboard_display" },
     //ftp
-    { "keys": ["alt+u"], "command": "sftp_upload_file" },
+    { "keys": ["alt+s"], "command": "sftp_upload_file" },
     { "keys": ["alt+d"], "command": "sftp_download_file" },
 
     { "keys": ["alt+b"], "command": "sftp_browse" },
 
-    { "keys": ["ctrl+alt+u","ctrl+alt+r"], "command": "sftp_upload_folder" },
-    { "keys": ["ctrl+alt+u","ctrl+alt+y"], "command": "sftp_sync_up" },
-    { "keys": ["ctrl+alt+u","ctrl+alt+n"], "command": "sftp_upload_open_files" },
-    { "keys": ["alt+m"], "command": "sftp_monitor_file" },
+    { "keys": ["alt+a"], "command": "sftp_monitor_file" },
 
-    { "keys": ["ctrl+alt+u","ctrl+alt+e"], "command": "sftp_download_folder" },
-    { "keys": ["ctrl+alt+u","ctrl+alt+i"], "command": "sftp_diff_remote_file" },
-
-    { "keys": ["ctrl+alt+u","ctrl+alt+c"], "command": "sftp_vcs_changed_files" },
-
-
-    { "keys": ["ctrl+alt+r","ctrl+alt+s"], "command": "sftp_create_server" },
     { "keys": ["alt+t"], "command": "sftp_browse_server" },
-    { "keys": ["alt+l"], "command": "sftp_last_server" },
+    // { "keys": ["alt+l"], "command": "sftp_last_server" },
     { "keys": ["alt+e"], "command": "sftp_edit_server" },
     { "keys": ["ctrl+alt+r","ctrl+alt+d"], "command": "sftp_delete_server" },
 
