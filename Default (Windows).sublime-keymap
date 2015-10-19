@@ -23,13 +23,13 @@
     { "keys": ["alt+shift+k"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true} },
 
     { "keys": ["alt+u"], "command": "move_to", "args": {"to": "bol", "extend": false} },
-    { "keys": ["alt+m"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+    { "keys": ["alt+h"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 
     { "keys": ["alt+shift+o"], "command": "move", "args": {"by": "pages", "forward": false, "extend": true} },
-    { "keys": ["alt+shift+."], "command": "move", "args": {"by": "pages", "forward": true, "extend": true} },
+    { "keys": ["alt+shift+;"], "command": "move", "args": {"by": "pages", "forward": true, "extend": true} },
 
     { "keys": ["alt+o"], "command": "move", "args": {"by": "pages", "forward": false} },
-    { "keys": ["alt+."], "command": "move", "args": {"by": "pages", "forward": true} },
+    { "keys": ["alt+;"], "command": "move", "args": {"by": "pages", "forward": true} },
 
     { "keys": ["alt+shift+j"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
     { "keys": ["alt+shift+l"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
@@ -38,13 +38,13 @@
     { "keys": ["ctrl+alt+shift+l"], "command": "move", "args": {"by": "word_ends", "forward": true, "extend": true} },
 
     { "keys": ["alt+shift+u"], "command": "move_to", "args": {"to": "bol", "extend": true} },
-    { "keys": ["alt+shift+m"], "command": "move_to", "args": {"to": "eol", "extend": true} },
+    { "keys": ["alt+shift+h"], "command": "move_to", "args": {"to": "eol", "extend": true} },
 
     { "keys": ["ctrl+alt+i"], "command": "scroll_lines", "args": {"amount": 10.0 } },
     { "keys": ["ctrl+alt+k"], "command": "scroll_lines", "args": {"amount": -10.0 } },
 
-    { "keys": ["alt+v", "alt+l"], "command": "next_view" },
-    { "keys": ["alt+v", "alt+j"], "command": "prev_view" },
+    { "keys": ["ctrl+alt+o"], "command": "prev_view" },
+    { "keys": ["ctrl+alt+;"], "command": "next_view" },
 
     { "keys": ["alt+z"], "command": "single_selection", "context":
       [
@@ -52,8 +52,18 @@
       ]
     },
 
+
+    { "keys": ["alt+m"], "command": "left_delete" },
+    { "keys": ["ctrl+alt+m"], "command": "delete_word", "args": { "forward": false } },
+    { "keys": ["ctrl+alt+shift+m"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard BOL.sublime-macro"} },
+
+    { "keys": ["alt+."], "command": "right_delete" },
+    { "keys": ["ctrl+alt+."], "command": "delete_word", "args": { "forward": true } },
+    { "keys": ["ctrl+alt+shift+."], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard EOL.sublime-macro"} },
+
+
     { "keys": ["ctrl+alt+u"], "command": "move_to", "args": {"to": "bof", "extend": false} },
-    { "keys": ["ctrl+alt+m"], "command": "move_to", "args": {"to": "eof", "extend": false} },
+    { "keys": ["ctrl+alt+h"], "command": "move_to", "args": {"to": "eof", "extend": false} },
     { "keys": ["ctrl+space"], "command": "replace_completion_with_auto_complete", "context":
         [
             { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
@@ -159,6 +169,35 @@
 
     {
         "keys": [
+            "ctrl+alt+i"
+        ], 
+        "args": {
+            "action": "increment_number_by_1"
+        }, 
+        "command": "run_emmet_action", 
+        "context": [
+            {
+                "key": "emmet_action_enabled.increment_number_by_1"
+            }
+        ]
+    }, 
+
+    {
+        "keys": [
+            "ctrl+alt+k"
+        ], 
+        "args": {
+            "action": "decrement_number_by_1"
+        }, 
+        "command": "run_emmet_action", 
+        "context": [
+            {
+                "key": "emmet_action_enabled.decrement_number_by_1"
+            }
+        ]
+    }, 
+    {
+        "keys": [
             "ctrl+shift+c"
         ], 
         "args": {
@@ -196,6 +235,36 @@
             }
         ]
     },
+
+    {
+        "keys": [
+            "ctrl+alt+shift+i"
+        ], 
+        "args": {
+            "action": "increment_number_by_10"
+        }, 
+        "command": "run_emmet_action", 
+        "context": [
+            {
+                "key": "emmet_action_enabled.increment_number_by_10"
+            }
+        ]
+    }, 
+
+    {
+        "keys": [
+            "ctrl+alt+shift+k"
+        ], 
+        "args": {
+            "action": "decrement_number_by_10"
+        }, 
+        "command": "run_emmet_action", 
+        "context": [
+            {
+                "key": "emmet_action_enabled.decrement_number_by_10"
+            }
+        ]
+    }, 
     {
         "keys": [
             "ctrl+,"
@@ -255,7 +324,7 @@
     },
     {
         "keys": [
-            "ctrl+alt+o"
+            "alt+shift+m"
         ],
         "args": {
             "action": "prev_edit_point"
@@ -269,7 +338,7 @@
     },
     {
         "keys": [
-            "ctrl+alt+."
+            "alt+shift+."
         ],
         "args": {
             "action": "next_edit_point"
