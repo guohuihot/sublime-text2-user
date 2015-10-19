@@ -52,7 +52,6 @@
       ]
     },
 
-
     { "keys": ["alt+m"], "command": "left_delete" },
     { "keys": ["ctrl+alt+m"], "command": "delete_word", "args": { "forward": false } },
     { "keys": ["ctrl+alt+shift+m"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard BOL.sublime-macro"} },
