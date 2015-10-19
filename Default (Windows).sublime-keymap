@@ -46,6 +46,9 @@
     { "keys": ["ctrl+alt+o"], "command": "prev_view" },
     { "keys": ["ctrl+alt+;"], "command": "next_view" },
 
+    { "keys": ["ctrl+."], "command": "indent" },
+    { "keys": ["ctrl+m"], "command": "unindent" },
+
     { "keys": ["alt+z"], "command": "single_selection", "context":
       [
         { "key": "num_selections", "operator": "not_equal", "operand": 1 }
