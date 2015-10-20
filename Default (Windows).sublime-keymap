@@ -75,6 +75,32 @@
         { "key": "num_selections", "operator": "not_equal", "operand": 1 }
       ]
     },
+    { "keys": ["alt+e"], "command": "clear_fields", "context":
+        [
+            { "key": "has_next_field", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["alt+e"], "command": "clear_fields", "context":
+        [
+            { "key": "has_prev_field", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["alt+e"], "command": "hide_panel", "args": {"cancel": true},
+        "context":
+        [
+            { "key": "panel_visible", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["alt+e"], "command": "hide_overlay", "context":
+        [
+            { "key": "overlay_visible", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["alt+e"], "command": "hide_auto_complete", "context":
+        [
+            { "key": "auto_complete_visible", "operator": "equal", "operand": true }
+        ]
+    },
     // 左删除
     { "keys": ["ctrl+h"], "command": "left_delete" },
     // 左删除一个单词
