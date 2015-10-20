@@ -334,7 +334,7 @@
     },
     {
         "keys": [
-            "alt+shift+."
+            "alt+shift+,"
         ],
         "args": {
             "action": "next_edit_point"
