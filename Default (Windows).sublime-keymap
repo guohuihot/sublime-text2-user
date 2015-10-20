@@ -114,7 +114,7 @@
     // 右删除一行的光标右侧
     { "keys": ["ctrl+alt+shift+;"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard EOL.sublime-macro"} },
 
-    { "keys": ["ctrl+e"], "command": "replace_completion_with_auto_complete", "context":
+    { "keys": ["alt+d"], "command": "replace_completion_with_auto_complete", "context":
         [
             { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
             { "key": "auto_complete_visible", "operator": "equal", "operand": false },
@@ -124,12 +124,61 @@
     // 后缩进
     { "keys": ["alt+o"], "command": "indent" },
     // 前缩进
+    { "keys": ["alt+space"], "command": "commit_completion", "context":
+        [
+            { "key": "auto_complete_visible" },
+            { "key": "setting.auto_complete_commit_on_tab", "operand": false }
+        ]
+    },
+    { "keys": ["alt+z"], "command": "show_at_center" },
+    
+    { "keys": ["alt+space"], "command": "insert_best_completion", "args": {"default": "\t", "exact": true} },
+    { "keys": ["alt+space"], "command": "insert_best_completion", "args": {"default": "\t", "exact": false},
+        "context":
+        [
+            { "key": "setting.tab_completion", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["tab"], "command": "replace_completion_with_next_completion", "context":
+        [
+            { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+            { "key": "setting.tab_completion", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["tab"], "command": "reindent", "context":
+        [
+            { "key": "setting.auto_indent", "operator": "equal", "operand": true },
+                { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "preceding_text", "operator": "regex_match", "operand": "^$", "match_all": true },
+            { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
+        ]
+    },
+    { "keys": ["tab"], "command": "indent", "context":
+        [
+            { "key": "text", "operator": "regex_contains", "operand": "\n" }
+        ]
+    },
+    { "keys": ["alt+space"], "command": "next_field", "context":
+        [
+            { "key": "has_next_field", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["tab"], "command": "commit_completion", "context":
+        [
+            { "key": "auto_complete_visible" },
+            { "key": "setting.auto_complete_commit_on_tab" }
+        ]
+    },
+
+
+
+
     { "keys": ["alt+u"], "command": "unindent" },
     { "keys": ["ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
     { "keys": ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
     { "keys": ["ctrl+'"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
 
-    { "keys": ["ctrl+e"], "command": "auto_complete" },
+    { "keys": ["alt+d"], "command": "auto_complete" },
 
     { "keys": ["f5"], "command": "sort_lines", "args": {"case_sensitive": false} },
     { "keys": ["alt+f"], "command": "find_all_under" },
@@ -151,7 +200,10 @@
     { "keys": ["alt+q"], "command": "focus_group", "args": { "group": 0 } },
     { "keys": ["alt+w"], "command": "focus_group", "args": { "group": 1 } },
 
-    { "keys": ["ctrl+q"], "command": "show_scope_name" },
+    { "keys": ["ctrl+shift+q"], "command": "show_scope_name" },
+
+    { "keys": ["alt+c"], "command": "copy" },
+    { "keys": ["alt+v"], "command": "paste" },
     //browse inside
     /*{
         "keys": ["ctrl+q"],
@@ -308,7 +360,7 @@
     },
     {//展开emmet的简写
         "keys": [
-            "ctrl+shift+u"
+            "alt+d"
         ],
         "args": {
             "action": "expand_abbreviation"
@@ -351,7 +403,7 @@
     },
     {
         "keys": [
-            "ctrl+alt+h"
+            "ctrl+alt+shift+space"
         ],
         "args": {
             "action": "prev_edit_point"
@@ -365,7 +417,7 @@
     },
     {
         "keys": [
-            "ctrl+alt+;"
+            "ctrl+alt+space"
         ],
         "args": {
             "action": "next_edit_point"
@@ -444,16 +496,14 @@
     //clip { "command": "list_all_edits", "caption": "List All" }
     { "keys": ["ctrl+alt+v"], "command": "clipboard_display" },
     //ftp
-    { "keys": ["alt+s"], "command": "sftp_upload_file" },
-    { "keys": ["alt+d"], "command": "sftp_download_file" },
+    { "keys": ["alt+s", "alt+e"], "command": "sftp_upload_file" },
+    { "keys": ["alt+s", "alt+d"], "command": "sftp_download_file" },
 
-    { "keys": ["alt+b"], "command": "sftp_browse" },
+    { "keys": ["alt+s", "alt+f"], "command": "sftp_browse" },
 
-    { "keys": ["alt+a"], "command": "sftp_monitor_file" },
+    { "keys": ["alt+s", "alt+g"], "command": "sftp_monitor_file" },
 
-    { "keys": ["alt+t"], "command": "sftp_browse_server" },
     // { "keys": ["alt+l"], "command": "sftp_last_server" },
-    { "keys": ["ctrl+alt+r","ctrl+alt+d"], "command": "sftp_delete_server" },
 
     { "keys": ["alt+`"], "command": "sftp_show_panel" },
     { "keys": ["alt+x"], "command": "sftp_cancel_upload" },
@@ -482,7 +532,7 @@
     //快速打开文件位置
     // { "keys": ["ctrl+f12"], "command": "open_dir", "args": {"dir": "$file_path", "file":"$file_name"}},
 
-     { "keys": ["alt+c"], "command": "copy_path" },
+     { "keys": ["ctrl+q"], "command": "copy_path" },
      { "keys": ["alt+a"], "command": "open_file_name"},
      { "keys": ["f12"], "command": "open_in_browser" },
      {
