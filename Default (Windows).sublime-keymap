@@ -6,9 +6,9 @@
     // 当前行向下移动
     { "keys": ["ctrl+shift+k"], "command": "swap_line_down" },
     // 在当前行下面插空行
-    { "keys": ["ctrl+m"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
+    { "keys": ["alt+m"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
     // 在当前上面插入空行
-    { "keys": ["ctrl+shift+m"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
+    { "keys": ["alt+shift+m"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
     // 软件撤消
     { "keys": ["ctrl+alt+d"], "command": "soft_undo" },
     // 光标移动对应的代码位置
@@ -69,6 +69,7 @@
     { "keys": ["ctrl+alt+u"], "command": "prev_view" },
     // 下一个选项卡
     { "keys": ["ctrl+alt+o"], "command": "next_view" },
+    { "keys": ["alt+shift+d"], "command": "find_under_expand_skip" },
 
     { "keys": ["alt+e"], "command": "single_selection", "context":
       [
@@ -139,13 +140,13 @@
             { "key": "setting.tab_completion", "operator": "equal", "operand": true }
         ]
     },
-    { "keys": ["tab"], "command": "replace_completion_with_next_completion", "context":
+    { "keys": ["alt+space"], "command": "replace_completion_with_next_completion", "context":
         [
             { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
             { "key": "setting.tab_completion", "operator": "equal", "operand": true }
         ]
     },
-    { "keys": ["tab"], "command": "reindent", "context":
+    { "keys": ["alt+space"], "command": "reindent", "context":
         [
             { "key": "setting.auto_indent", "operator": "equal", "operand": true },
                 { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
@@ -153,7 +154,7 @@
             { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
         ]
     },
-    { "keys": ["tab"], "command": "indent", "context":
+    { "keys": ["alt+space"], "command": "indent", "context":
         [
             { "key": "text", "operator": "regex_contains", "operand": "\n" }
         ]
@@ -163,14 +164,12 @@
             { "key": "has_next_field", "operator": "equal", "operand": true }
         ]
     },
-    { "keys": ["tab"], "command": "commit_completion", "context":
+    { "keys": ["alt+space"], "command": "commit_completion", "context":
         [
             { "key": "auto_complete_visible" },
             { "key": "setting.auto_complete_commit_on_tab" }
         ]
     },
-
-
 
 
     { "keys": ["alt+u"], "command": "unindent" },
