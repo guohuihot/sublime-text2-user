@@ -4,3 +4,5 @@ Package Control.cache
 /SFTP.errors.log
 /encoding_cache.json
 /.SublimeREPLHistory/powershell.db
+/c2u_tmp
+/sftp_servers
