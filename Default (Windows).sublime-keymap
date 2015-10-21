@@ -102,6 +102,7 @@
             { "key": "auto_complete_visible", "operator": "equal", "operand": true }
         ]
     },
+    { "keys": ["ctrl+m"], "command": "insert", "args": {"characters": "\n"} },
     // 左删除
     { "keys": ["ctrl+h"], "command": "left_delete" },
     // 左删除一个单词
