@@ -2,6 +2,8 @@
 // 左移动 
     // 光标向左一个字符
     { "keys": ["alt+j"], "command": "move", "args": {"by": "characters", "forward": false} },
+    // 左移一个小单词
+    { "keys": ["alt+shift+j"], "command": "move", "args": {"by": "subwords", "forward": false} },
     // 向左移动一个单词
     { "keys": ["ctrl+alt+j"], "command": "move", "args": {"by": "words", "forward": false} },
     // 移动到行首
@@ -9,6 +11,8 @@
 // 右移动
     // 光标向右一个字符
     { "keys": ["alt+l"], "command": "move", "args": {"by": "characters", "forward": true} },
+    // 右移一个小单词
+    { "keys": ["alt+shift+l"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
     // 向右移动一个单词
     { "keys": ["ctrl+alt+l"], "command": "move", "args": {"by": "word_ends", "forward": true} },
     // 移动到行尾
@@ -16,6 +20,8 @@
 // 左选中
     // 光标向左一个字符并选中
     { "keys": ["alt+h"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
+    // 左选中一个小单词
+    { "keys": ["alt+shift+h"], "command": "move", "args": {"by": "subwords", "forward": false, "extend": true} },
     // 光标向左一个单词并选中
     { "keys": ["ctrl+alt+h"], "command": "move", "args": {"by": "words", "forward": false, "extend": true} },
     // 移动到行首并选中
@@ -24,6 +30,8 @@
 // 右选中
     // 光标向右一个字符并选中
     { "keys": ["alt+;"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
+    // 右选中一个小单词
+    { "keys": ["alt+shift+;"], "command": "move", "args": {"by": "subword_ends", "forward": true, "extend": true} },
     // 光标向右一个单词并选中
     { "keys": ["ctrl+alt+;"], "command": "move", "args": {"by": "word_ends", "forward": true, "extend": true} },
     // 移动到行尾并选中
@@ -43,6 +51,8 @@
 // 上移动
     // 光标向上一行
     { "keys": ["alt+i"], "command": "move", "args": {"by": "lines", "forward": false} },
+    // 上移10行
+    { "keys": ["alt+shift+8"], "command": "scroll_lines", "args": {"amount": 10.0 } },
     // 上一页
     { "keys": ["ctrl+alt+i"], "command": "move", "args": {"by": "pages", "forward": false} },
     // 页头
@@ -54,6 +64,8 @@
 // 下移动
     // 光标向下一行
     { "keys": ["alt+k"], "command": "move", "args": {"by": "lines", "forward": true} },
+    // 下移10行
+    { "keys": ["alt+shift+,"], "command": "scroll_lines", "args": {"amount": -10.0 } },
     // 下一页
     { "keys": ["ctrl+alt+k"], "command": "move", "args": {"by": "pages", "forward": true} },
     // 页尾
