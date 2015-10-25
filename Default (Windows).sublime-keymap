@@ -568,7 +568,7 @@
              }
          },
 
-        
+{ "keys": ["ctrl+shift+o"], "command": "open_browse" },
      // css_comb
      { "keys": ["ctrl+alt+s"], "command": "css_comb" }
  
