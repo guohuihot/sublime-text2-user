@@ -1,9 +1,9 @@
 {
     // Files or directories to be shown at the begining
-    "bookmarks": ["~","E:/"],
+    "bookmarks": ["~","E:/","C:/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/"],
 
     // Bookmark identifier in the first panel. Can be "%d" to enumerate them
-    "bookmark_prefix": "#",
+    "bookmark_prefix": ">",
     "persistent_browsing": true,
 
     // List the directory of the currently file (tab)
