@@ -1,6 +1,7 @@
 {
     // Files or directories to be shown at the begining
-    "bookmarks": ["~","E:/","C:/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/"],
+    // "bookmarks": ["~","E:/","C:/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/"],
+    "bookmarks": [],
 
     // Bookmark identifier in the first panel. Can be "%d" to enumerate them
     "bookmark_prefix": ">",
