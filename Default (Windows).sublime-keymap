@@ -371,13 +371,15 @@
             "file": "Packages/Default/Add Line Before.sublime-macro"
         }
     },
+    { "keys": ["ctrl+m"], "command": "insert", "args": {"characters": "\n"} },
     // 回车
-    {
-        "keys": ["ctrl+m"],
-        "command": "insert",
-        "args": {
-            "characters": "\n"
-        }
+    { "keys": ["ctrl+m"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line in Braces.sublime-macro"}/*, "context":
+        [
+            { "key": "setting.auto_indent", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "\\{$", "match_all": true },
+            { "key": "following_text", "operator": "regex_contains", "operand": "^\\}", "match_all": true }
+        ]*/
     },
     // 软件撤消
     {
@@ -406,8 +408,10 @@
     {
         "keys": ["ctrl+h"],
         "command": "unindent"
-    }, {
-        "keys": ["alt+space"],
+    },
+    // 选择第一个
+    {
+        "keys": ["enter"],
         "command": "commit_completion",
         "context": [{
             "key": "auto_complete_visible"
@@ -505,19 +509,21 @@
         "keys": ["alt+g"],
         "command": "show_at_center"
     },
-
+// 插件代码片段
     {
-        "keys": ["alt+space"],
+        "keys": ["alt+shift+space"],
         "command": "insert_best_completion",
         "args": {
             "default": "\t",
             "exact": true
         }
-    }, {
-        "keys": ["alt+space"],
+    }, 
+// 插件代码片段
+    {
+        "keys": ["alt+shift+space"],
         "command": "insert_best_completion",
         "args": {
-            "default": "\t",
+            "default": "\n",
             "exact": false
         },
         "context": [{
@@ -568,7 +574,8 @@
             "operator": "regex_contains",
             "operand": "\n"
         }]
-    }, {
+    }, 
+    {
         "keys": ["alt+space"],
         "command": "next_field",
         "context": [{
@@ -576,7 +583,8 @@
             "operator": "equal",
             "operand": true
         }]
-    }, {
+    }, 
+    {
         "keys": ["alt+space"],
         "command": "commit_completion",
         "context": [{
