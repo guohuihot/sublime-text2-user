@@ -730,7 +730,7 @@
         "context": [{
             "key": "selector",
             "operator": "equal",
-            "operand": "source.js,source.json"
+            "operand": "source.js,source.json,text.html"
         }]
     },
     // tag
