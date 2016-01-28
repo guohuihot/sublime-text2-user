@@ -8,8 +8,12 @@
 			"contents": "return false;"
 		}, 
 		{
-			"trigger": "r\tMY-JS",
+			"trigger": "r;\tMY-JS",
 			"contents": "return;"
+		},
+		{
+			"trigger": "f\tMY-JS",
+			"contents": "function() {\n\t\n}"
 		}
 
 	]

@@ -1204,6 +1204,9 @@
     {
         "keys": ["ctrl+alt+s"],
         "command": "css_comb"
-    }
+    },
+
+    { "keys": ["ctrl+u"], "command": "upper_case" },
+    { "keys": ["ctrl+shift+u"], "command": "lower_case" }
 
 ]
