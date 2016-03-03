@@ -9,7 +9,7 @@
 			"selector": "text.html,source.js,source.css, source.less, source.scss"
 		}
 	],
-	"auto_id_class": true,
+	"auto_id_class": false,
 	"color_scheme": "Packages/User/Monokai Bright.tmTheme",
 	"detect_slow_plugins": false,
 	"dictionary": "Packages/Language - English/en_GB.dic",
