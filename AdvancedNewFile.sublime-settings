@@ -145,7 +145,7 @@
     "shell_input": false,
 
     // Setting to control if the extension will be automatically applied to renamed files.
-    "append_extension_on_move": false,
+    "append_extension_on_move": true,
 
     // An integer value representing a folder index to be used when a relative path
     // cannot be resolved from the current active view. If an index outside of the range
