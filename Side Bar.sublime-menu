@@ -13,4 +13,5 @@
 }, {
 	"caption": "ANF: Cut to File",
 	"command": "advanced_new_file_cut_to_file"
-} ]
+}
+]
