@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-{c\$cnode [tclass=cnode/] [listby=ca/] [val=a/] [casource=${1:2}/]}{indexurl${2:1}}{/c\$cnode}${0:说明:[casource=2/] [listby=co12/] [cosource12=3023/] casource -栏目id(active) cosource12 12-类系id}]]></content>
-    <tabTrigger>cnode</tabTrigger>
-    <description>08cms - 类目节点</description>
-    <scope>text.html</scope>
-</snippet>

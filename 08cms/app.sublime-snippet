@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-app.request.get('${1:pageIndex}')]]></content>
-    <tabTrigger>app</tabTrigger>
-    <description>08cms - app.request.get</description>
-    <scope>text.html</scope>
-</snippet>

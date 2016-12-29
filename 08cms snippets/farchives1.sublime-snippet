@@ -1,9 +1,0 @@
-<snippet>
-    <content><![CDATA[
-{c\$farchives [tclass=farchives/] [limits=${1:1}/] [validperiod=1/] [casource=${2:100}/] [orderstr=a.vieworder ASC/]}
-<a href="{link}" target="_blank">{subject}</a>
-{/c\$farchives}]]></content>
-    <tabTrigger>farclink</tabTrigger>
-    <description>08cms - 文字副件列表</description>
-    <scope>text.html</scope>
-</snippet>

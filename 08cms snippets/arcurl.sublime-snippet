@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-${1:{arcurl\}}${2:{url\}}]]></content>
-    <tabTrigger>url</tabTrigger>
-    <description>08cms - {arcurl}</description>
-    <scope>text.html</scope>
-</snippet>

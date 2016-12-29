@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[{if \$${1:${2:v}['${3:sn_row}']${4}}}${5}${6:{else\}${7}}{/if}]]></content>
-    <tabTrigger>if</tabTrigger>
-    <description>08cms - if else</description>
-    <scope>text.html</scope>
-</snippet>

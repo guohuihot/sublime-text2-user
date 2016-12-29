@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[${1:\$v['sn_row']}${2:{\$v['sn_row']\}}]]></content>
-    <tabTrigger>sn</tabTrigger>
-    <description>08cms - {$v['sn_row']}</description>
-    <scope>text.html</scope>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[{c\$image [tclass=image/] [tname=${1:thumb}/] ${2:[maxwidth=${3:300}/]} ${4:[maxheight=${5:280}/]} ${6:[thumb=1/]} ${7:[padding=1/]} [val=u/]}{url}{/c\$image}]]></content>
-    <tabTrigger>img-url</tabTrigger>
-    <description>08cms - img-url</description>
-    <scope>text.html</scope>
-</snippet>

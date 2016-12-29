@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[{ccid${1:1}title\}]]></content>
-    <tabTrigger>ccidtitle</tabTrigger>
-    <description>08cms - {ccidtitle}</description>
-    <scope>text.html</scope>
-</snippet>

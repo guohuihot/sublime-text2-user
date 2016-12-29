@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-{c\$freeurl [tclass=freeurl/] [fid=${1:1}/]}{/c\$freeurl}]]></content>
-    <tabTrigger>furl</tabTrigger>
-    <description>08cms - 独立页</description>
-    <scope>text.html</scope>
-</snippet>

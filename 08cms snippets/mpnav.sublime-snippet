@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[{\$mpnav}]]></content>
-    <tabTrigger>mpnav</tabTrigger>
-    <description>08cms - mpnav</description>
-    <scope>text.html</scope>
-</snippet>

@@ -1,9 +1,0 @@
-<snippet>
-    <content><![CDATA[
-{c\$pushs [tclass=pushs/] [paid=${1:2}/] [limits=${2:1}/] [ttl=600/]}
-<li><a href="{url}" target="_blank" title="{subject}">{c\$subject [tclass=text/] [tname=subject/] ${4:[trim=100/]}${5:[color=color/]}}{/c\$subject}</a></li>
-{/c\$pushs}]]></content>
-    <tabTrigger>pus</tabTrigger>
-    <description>08cms - 推送列表</description>
-    <scope>text.html</scope>
-</snippet>

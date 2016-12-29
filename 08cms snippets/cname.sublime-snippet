@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[[cname=${1}/]]]></content>
-    <tabTrigger>cname</tabTrigger>
-    <description>08cms - cname</description>
-    <scope>text.html</scope>
-</snippet>

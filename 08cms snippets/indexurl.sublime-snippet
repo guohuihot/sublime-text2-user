@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[{indexurl${1:1}}]]></content>
-    <tabTrigger>ind</tabTrigger>
-    <description>08cms - indexurl</description>
-    <scope>text.html</scope>
-</snippet>

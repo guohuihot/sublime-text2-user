@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[[casource${1:1}=${2:active}/]]]></content>
-    <tabTrigger>casource</tabTrigger>
-    <description>08cms - casource</description>
-    <scope>text.html</scope>
-</snippet>

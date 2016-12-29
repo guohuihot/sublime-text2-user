@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[{title}]]></content>
-    <tabTrigger>title</tabTrigger>
-    <description>08cms - {title}</description>
-    <scope>text.html</scope>
-</snippet>

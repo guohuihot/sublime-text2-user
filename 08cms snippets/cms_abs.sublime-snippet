@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-{\$cms_abs}]]></content>
-    <tabTrigger>cms</tabTrigger>
-    <description>08cms - {$cms_abs}</description>
-    <scope>text.html</scope>
-</snippet>

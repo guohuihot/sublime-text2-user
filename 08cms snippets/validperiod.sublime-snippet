@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[[validperiod=1/]]]></content>
-    <tabTrigger>validperiod</tabTrigger>
-    <description>08cms - validperiod</description>
-    <scope>text.html</scope>
-</snippet>

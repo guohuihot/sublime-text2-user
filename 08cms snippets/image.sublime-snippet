@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-<img alt="{subject}" {c\$image [tclass=image/] [tname=thumb/] [val=u/] [maxwidth=${1:330}/] [maxheight=${2:250}/] [thumb=1/]} src="{url_s}"  height="${2:250}" width="${1:330}" {/c\$image}/>]]></content>
-    <tabTrigger>img</tabTrigger>
-    <description>08cms - 图片模块</description>
-    <scope>text.html</scope>
-</snippet>
