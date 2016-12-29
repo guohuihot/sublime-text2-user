@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[[cosource${7:13}=1/] [ccids${7:13}=${8:6}/]]]></content>
+    <tabTrigger>cosource</tabTrigger>
+    <description>08cms - cosource</description>
+    <scope>text.html</scope>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[[val=${1:a}/]]]></content>
+    <tabTrigger>val</tabTrigger>
+    <description>08cms - [val=/]</description>
+    <scope>text.html</scope>
+</snippet>

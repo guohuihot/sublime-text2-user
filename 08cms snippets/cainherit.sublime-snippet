@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+[cainherit=${1:1}/]]]></content>
+    <tabTrigger>cainherit</tabTrigger>
+    <description>08cms - cainherit</description>
+    <scope>text.html</scope>
+</snippet>

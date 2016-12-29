@@ -1,0 +1,110 @@
+{
+	"scope": "text.html - source - meta.tag, punctuation.definition.tag.begin",
+
+	"completions":
+	[
+		// 自定义
+		{ "trigger": "linkcss\tMY-newcore", "contents": "{{ cgb.linkcss('bundles/' ~ bundlepath ~ '/css/${1:ats.css}') }}" },
+		{ "trigger": "page\tMY-newcore", "contents": "{{ cgb.page(ident.list) }}" },
+		{ "trigger": "ad\tMY-newcore", "contents": "{{ cgb.ad(item|merge({\n\t'type': '1',\n\t'width':'${1:1200}',\n\t'height': '${2:70}',\n\t'class': 'mb5'\n\t})) }}${3}" },
+		{ "trigger": "formData\tMY-newcore", "contents": "{{ cgb.formData({value: item.cate_type, form: 'house.category', field: 'cate_type', tpl: '<span>%name%</span>'}) }}" },
+		{ "trigger": "formData\tMY-newcore", "contents": "{{ cgb.formData({value: item.id, form: 'house.category', tpl: '<span>%name%</span>'}) }}" },		
+		{ "trigger": "area\tMY-newcore", "contents": "{{cgb.area({id: item.id|default('')})}}" },
+		{ "trigger": "areas\tMY-newcore", "contents": "{{cgb.area({id: item.id|default('')})}}" },		
+		{ "trigger": "if\tMY-newcore", "contents": "{{ cgb.if({value: item.zj|default(''), show: '<span>万元</span>', hide:''}) }}" }
+		 ,
+		 // \n换行符 \t缩进符
+		 // class=\"title\" 本来是class="title",写成这样是为了区分其他双引号
+		{ "trigger": "if_dw\tMY-newcore", "contents": "{{ cgb.if_dw({value: item.zj|default('')}) }}" },
+		{ "trigger": "mconfig\tMY-newcore", "contents": "{{ cgb.mconfig('hostname'${1:, '${2:<div class=\"title\">%value%</div>}', '${3:mwebset}'}) }}" },
+		 // {{- cgb.mconfig('hostname', '<div class="title">%value%</div>', 'mwebset') -}}
+		{ "trigger": "timeformat\tMY-newcore", "contents": "{{ cgb.timeformat({\n\ttime: '${1:2010-10-10}',\n\ttpl: '${2:<span>%time%</span>}'\n}) }}" },
+		{ "trigger": "if_mj\tMY-newcore", "contents": "{{cgb.if_mj({value: item.mj|default('')})}}" },
+		{ "trigger": "if_wy\tMY-newcore", "contents": "{{cgb.if_wy({value: item.zj|default('')})}}" },
+		{ "trigger": "if_czj\tMY-newcore", "contents": "{{cgb.if_czj({value: item.czj|default('')})}}" },
+		{ "trigger": "pushTit\tMY-newcore", "contents": "{{ cgb.pushTit({\n\ttag: '${1:fczx}',\n\turl: ('${2:news/index}')|U })\n}}" },
+		{ "trigger": "ads\tMY-newcore", "contents": "{{ cgb.ads({\n\ttag: '${1:aaa}',\n\tdata: ${2:data}\n}) }}"},
+		{ "trigger": "ad\tMY-newcore", "contents": "{{ cgb.ad(item|merge({'type': '${1:1}', 'height': '${2:70}', 'width':'${3:1200}', 'class': '${4:mb5}'})) }}"},
+		{ "trigger": "img_url\tMY-newcore", "contents": "{{ cgb.img_url({\n\theight: ${1:450},\n\tsrc: item.thumb\n}) }}"},
+		{ "trigger": "img\tMY-newcore", "contents": "{{ cgb.img({\n\theight: ${1:450},\n\tsrc: item.thumb,\n\talt: item.name\n}) }}"},
+		{ "trigger": "data_src_img\tMY-newcore", "contents": "{{ cgb.data_src_img({\n\theight: ${1:450},\n\t width：${2:200},\n\tsrc: \"${3:http://192.168.1.7/newcore/web/bundles/house/images/aa.jpg}\",\n\talt: \"${4:标题}\" \n}) }}"}, 
+		{ "trigger": "lazy_img\tMY-newcore", "contents": "{{ cgb.lazy_img({\n\theight: ${1:450},\n\twidth：${2:200},\n\tsrc: \"${3:http://192.168.1.7/newcore/web/bundles/house/images/aa.jpg}\",\n\talt: \"${4:标题}\" \n}) }}"}, 
+		{ "trigger": "allcount\tMY-newcore", "contents": "{{ cgb.allcount({form: 'houses_door', aid: housesDetail.id|default('')}) }}"},
+		{ "trigger": "countshi\tMY-newcore", "contents": "{{- cgb.countshi({aid: housesDetail.id|default(''), tpl: '<li><a class=\"%class% album\" rel=\"nofollow\" href=\"#shi=%shi%\" data-aid=\"' ~ housesDetail.id|default('') ~ '\" data-shi=\"%shi%\">%name%(%number%)</a><span>|</span></li>'}) -}}"},
+ 		{ "trigger": "countshi\tMY-newcore", "contents": "{{- cgb.countshi({aid: ${1:housesDetail}.id|default(''), tpl: '<li><a class=\"%class% album\" rel=\"nofollow\" href=\"#shi=%shi%\" data-aid=\"' ~ housesDetail.id|default('') ~ '\" data-shi=\"%shi%\">%name%(%number%)</a><span>|</span></li>'}) -}}"},
+ 		{ "trigger": "countxc\tMY-newcore", "contents": "{{- cgb.countxc({aid: ${1:housesDetail}|default(''), tpl: '<li><a class=\"%class% album\" href=\"#cate=%cate%\" data-cate=\"%cate%\" data-aid=\"' ~ housesDetail.id|default('') ~ '\">%name%(%number%)</a><span>|</span></li>'}) -}}"},
+ 		{ "trigger": "hxtpl\tMY-newcore", "contents": "{{- cgb.hxtpl(o.tpl|default('%shi%%ting%'), huxing) -}}"},
+ 		{ "trigger": "lptag\tMY-newcore", "contents": "{{- cgb.lptag({value: housesDetail, tpl:'<span>%value%</span>' con: 'zxcd,cate_type'}) -}}"},
+ 		{ "trigger": "sort\tMY-newcore", "contents": "{{ cgb.sort({\n\taction: action,\n\tfilter_opt: filter_opt,\n\ttpl: '${1:<a href=\"%url%\" class=\"sort-btn %cls%\">%title%<i class=\"up font-lp-12\"></i><i class=\"down font-lp-11\"></i></a>}',\n\tdata: {\n\tdef: {\n\ttitle: '${2:默认}'\n\t},\n\tdj: {\n\ttitle: '${3:楼盘价格}' \n\t},\n\tkpdate: {\n\ttitle: '${4:开盘时间}'\n\t},\n\tclicks: {\n\ttitle: '${5:人气}'\n\t}\n\t}\n}) }}"},
+	    { "trigger": "lsitType\tMY-newcore", "contents": "{{ cgb.lsitType({\n\taction: action,\n\tfilter_opt: filter_opt,\n\ttpl: '${1:<a href=\"%url%\" class=\"sort-btn %cls%\">%title%<i class=\"up font-lp-12\"></i><i class=\"down font-lp-11\"></i></a>}',\n\tdata: {\n\tdef: {\n\ttitle: '${2:默认}'\n\t},\n\tdj: {\n\ttitle: '${3:楼盘价格}' \n\t},\n\tkpdate: {\n\ttitle: '${4:开盘时间}'\n\t},\n\tclicks: {\n\ttitle: '${5:人气}'\n\t}\n\t}\n}) }}"},		  
+ 		{ "trigger": "url\tMY-newcore", "contents": "{{- cgb.url(item) -}}"},
+ 		{ "trigger": "img\tMY-newcore", "contents": "{{- cgb.img({thumb: item.thumb}) -}}"},
+ 		{ "trigger": "img\tMY-newcore", "contents": "{{- cgb.img({thumb: item.thumb, type: 2, width: ${1:160}, height: ${2:200}, quality: ${3:60}}) -}}"},
+ 		{ "trigger": "publisher\tMY-newcore", "contents": "{{- cgb.publisher({id: users.id|default('')}) -}}"},
+ 		{ "trigger": "publisher_list\tMY-newcore", "contents": "{{- cgb.publisher_list(item.uid|default('')) -}}"},
+ 		{ "trigger": "address\tMY-newcore", "contents": "{{- cgb.address({address: item.address, area: item.area}}) -}}"},
+ 		{ "trigger": "video\tMY-newcore", "contents": "<div id=\"videoPlay\"></div>\n\t{{- cgb.video({url: videos_detail.upvideo}}) -}}"},
+ 		{ "trigger": "search\tMY-newcore", "contents": "{{cgb.search({\n\taction: ('${1:house/list}')|U,\n\tclass: '${2:aa}',\n\ttarget: '${3:_self}',\n\ttext: '搜索',\n\tplaceholder: o.placeholder|default('${4:请输入楼盘名称/地址/拼音}')\n})}}"},
+ 		{ "trigger": "inter\tMY-newcore", "contents": "{{cfm.inter({\n\tform_id: ${1:275},\n\taid: ${2:11},\n\tsubmit_title:'${3:立即订阅}',\n\taction: '${4:grouporder/save}',\n})}}"},
+ 		{ "trigger": "formField\tMY-newcore", "contents": "{{ cgb.formField({value: ${1:vo.tslp}, form: '${2:houses}', field: '${3:tslp}', tpl: '<a href=\"http://www.aaa.com/a.php?id=%value%\">%title%</a>'}) }}"},
+ 		{ "trigger": "bundlepath\tMY-newcore", "contents": "bundlepath"},
+ 		{ "trigger": "getRow\tMY-newcore", "contents": "getRow"},
+ 		{ "trigger": "getTreeSearch\tMY-newcore", "contents": "getTreeSearch"},
+ 		{ "trigger": "keywords\tMY-newcore", "contents": "{{- cgb.keywords({keywords: item.keywords}}) -}}"}
+        
+        
+        
+        
+  
+        
+        
+       
+        
+       
+    
+
+       
+        
+        
+        
+            
+                
+           
+            
+                
+            
+            
+                
+            
+            
+                
+            
+        
+    
+
+
+       
+        
+        
+        
+    
+        
+       
+        
+    
+        
+        
+    
+        
+        
+   
+
+        
+        
+   
+
+
+
+
+	]
+}

@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+{c\$text [tclass=text/] [tname=${1:subject}${2:abstract}/] [trim=${3:12}/] [ellip=.../] ${4:[color=color/]}}{/c\$text}]]></content>
+    <tabTrigger>text</tabTrigger>
+    <description>08cms - 文本处理</description>
+    <scope>text.html</scope>
+</snippet>

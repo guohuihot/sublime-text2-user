@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+${1:{hostname\}}]]></content>
+    <tabTrigger>hostname</tabTrigger>
+    <description>08cms - {hostname}</description>
+    <scope>text.html</scope>
+</snippet>

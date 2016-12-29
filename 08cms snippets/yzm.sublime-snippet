@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+	{c\$regcode [tclass=regcode/] [type=commu40/] [js=1/]}
+	<dt>验证码：</dt>
+	<dd><?php echo _08_HTML::getCode('regcode-aa', 'regcode-bb', 'txt');?></dd>
+	{/c\$regcode}]]></content>
+    <tabTrigger>yzm</tabTrigger>
+    <description>08cms - 验证码</description>
+    <scope>text.html</scope>
+</snippet>

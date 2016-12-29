@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+{{ dump(${1:pageIndex}) }}]]></content>
+    <tabTrigger>dump</tabTrigger>
+    <description>08cms - {{dump()}}</description>
+    <scope>text.html</scope>
+</snippet>

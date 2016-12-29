@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+{subject}]]></content>
+    <tabTrigger>s</tabTrigger>
+    <description>08cms - {subject}</description>
+    <scope>text.html</scope>
+</snippet>
