@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[[row]
+		${1}
+[/row]]]></content>
+    <tabTrigger>row</tabTrigger>
+    <description>08cms - [row]</description>
+    <scope>text.html</scope>
+</snippet>

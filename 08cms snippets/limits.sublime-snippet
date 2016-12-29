@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[[limits=${1:1}/]]]></content>
+    <tabTrigger>limits</tabTrigger>
+    <description>08cms - [limits=/]</description>
+    <scope>text.html</scope>
+</snippet>

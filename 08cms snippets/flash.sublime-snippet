@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[{c\$flash [tclass=flash/] [tname=flash/] [val=f/] [width=${1:720}/] [height=${2:120}/]}{playbox}{/c\$flash}]]></content>
+    <tabTrigger>flash</tabTrigger>
+    <description>08cms - flash模块</description>
+    <scope>text.html</scope>
+</snippet>

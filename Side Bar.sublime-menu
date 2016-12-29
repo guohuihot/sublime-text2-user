@@ -1,0 +1,17 @@
+[{
+	"caption": "ANF: New File",
+	"command": "advanced_new_file_new_at",
+	"args": {
+		"dirs": ["e:"]
+	}
+}, {
+	"caption": "ANF: Move File",
+	"command": "advanced_new_file_move_at",
+	"args": {
+		"files": []
+	}
+}, {
+	"caption": "ANF: Cut to File",
+	"command": "advanced_new_file_cut_to_file"
+}
+]

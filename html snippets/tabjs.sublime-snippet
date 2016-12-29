@@ -1,0 +1,21 @@
+<snippet>
+    <content><![CDATA[
+<script type="text/javascript">
+//滑动门
+ var table = function(){
+ var data = {};
+ return function(item){
+  var x = item.id.match(/^(\w+\_(?:\d+\_)?)(\d+)\$/);
+  if(typeof data[x[1]] == "undefined") data[x[1]] = 1;
+  \$("#r_" + x[1] + data[x[1]]).css("display","none");
+  \$("#r_" + x[1] + x[2]).css("display","");
+  \$("#" + x[1] + data[x[1]]).removeClass("act");;
+  \$("#" + x[1] + x[2]).addClass("act");;
+  data[x[1]] = x[2];
+ };
+}();
+</script>]]></content>
+    <tabTrigger>tabjs</tabTrigger>
+    <description>html - tabjs</description>
+    <scope>text.html</scope>
+</snippet>

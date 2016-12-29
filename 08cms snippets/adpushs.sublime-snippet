@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+{c\$pushs [tclass=pushs/] [paid=${1:2}/] [limits=${2:10}/] [ttl=600/]}
+<div class="ad mb5">{if \$v['thumb']}<a href="{url}" target="_blank"><img {c\$image [tclass=image/] [tname=thumb/] [val=u/] [maxwidth=${4:1000}/] [maxheight=${5:55}/]} src="{url}"  height="${5:55}" width="${4:1000}"
+{/c\$image}/></a>{elseif \$v['flash']}{c\$flash [tclass=flash/] [tname=flash/] [val=f/] [width=${4:1000}/] [height=${5:55}/]}{playbox}{if \$v['url']}<a href="{\$v['url']}" style="position: relative;margin-top:-{height}px;width:{width}px;height:{height}px;display:block" target="_blank"><img width="{width}" height="{height}" src="{\$cms_abs}userfiles/notdel/blank.gif"/></a>{/if}{/c\$flash}{/if\}</div>
+{/c\$pushs}]]></content>
+    <tabTrigger>adpus</tabTrigger>
+    <description>08cms - ad推送列表</description>
+    <scope>text.html</scope>
+</snippet>

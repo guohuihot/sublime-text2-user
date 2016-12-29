@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[[trim=${1:50}/]]]></content>
+    <tabTrigger>trim</tabTrigger>
+    <description>08cms - trim</description>
+    <scope>text.html</scope>
+</snippet>
