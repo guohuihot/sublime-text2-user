@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@media ${1:print} {
+	<string>@media (min-width: ${1:1200px}${2:992px}${3:768px}) {
 	$0
-	}</string>
+}</string>
 	<key>name</key>
 	<string>@media</string>
 	<key>scope</key>
 	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
-	<string>@m</string>
+	<string>me</string>
 	<key>uuid</key>
 	<string>3A9E3BFE-2B1B-4E85-818F-93EEF8543813</string>
 </dict>

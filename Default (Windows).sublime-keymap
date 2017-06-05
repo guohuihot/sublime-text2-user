@@ -373,6 +373,8 @@
         }
     },
     { "keys": ["ctrl+m"], "command": "insert", "args": {"characters": "\n"} },
+    { "keys": ["shift+space"], "command": "insert", "args": {"characters": "&nbsp;"} },
+    { "keys": ["shift+enter"], "command": "insert", "args": {"characters": "<br/>"} },
     // 回车
     { "keys": ["ctrl+m"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line in Braces.sublime-macro"}/*, "context":
         [

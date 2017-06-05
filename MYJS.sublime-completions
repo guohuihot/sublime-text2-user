@@ -8,12 +8,16 @@
 			"contents": "return false;"
 		}, 
 		{
-			"trigger": "r;\tMY-JS",
-			"contents": "return;"
+			"trigger": "rn;\tMY-JS",
+			"contents": "return $1;"
 		},
 		{
 			"trigger": "f\tMY-JS",
 			"contents": "function() {\n\t\n}"
+		},
+		{
+			"trigger": "tc\tMY-JS",
+			"contents": "try {\n\t$1\n} catch (err) {\n\tconsole.warn(err);\n}"
 		}
 
 	]
